@@ -12,8 +12,14 @@ final class HubBaseTests: XCTestCase {
         XCTAssertEqual(color, HubBase.primaryColor)
     }
     
+    func testSecondaryHubColorAreEqual() {
+        let color = HubBase.colorFromHexString("FCFFFD")
+        XCTAssertEqual(color, HubBase.secondaryColor)
+    }
+    
     static var allTests = [
         ("testColorRedEqual", testColorRedEqual),
-        ("testHubColorsAreEqual", testHubColorsAreEqual)
+        ("testHubColorsAreEqual", testHubColorsAreEqual),
+        ("testSecondaryHubColorAreEqual", testSecondaryHubColorAreEqual)
     ]
 }

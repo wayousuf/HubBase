@@ -25,8 +25,13 @@ public class HubBase {
         return UIColor(red: 0, green: 0, blue: 0, alpha: alpha)
     }
     
-    /// The primiary colo of the hub base app
+    /// The primiary color of the hub base app
     public static var primaryColor: UIColor {
         return self.colorFromHexString("006736")
+    }
+    
+    /// The secondary color of the hub base app
+    public static var secondaryColor: UIColor {
+        return self.colorFromHexString("FCFFFD")
     }
 }
