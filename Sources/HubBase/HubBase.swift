@@ -9,7 +9,7 @@ public class HubBase {
     ///   - hexString: A 6-degit hex string, User 6 digits ratha than 8, and add the accompaying alpha value in the second parameter
     ///   - alpha: A number between 0.0 and 1.0 indicating how transparent the color is
     /// - Returns: A UiColor defined by the 'hexString' parameter
-    class func colorFromHexString(_ hexString: String, alpha: CGFloat = 1.0) -> UIColor {
+    internal class func colorFromHexString(_ hexString: String, alpha: CGFloat = 1.0) -> UIColor {
         let r, g, b: CGFloat
         let offset = hexString.hasPrefix("#") ? 1 : 0
         let start = hexString.index(hexString.startIndex, offsetBy: offset)
@@ -23,5 +23,10 @@ public class HubBase {
             return UIColor(red: r, green: g, blue: b, alpha: alpha)
         }
         return UIColor(red: 0, green: 0, blue: 0, alpha: alpha)
+    }
+    
+    /// The primiary colo of the hub base app
+    public static var primaryColor: UIColor {
+        return self.colorFromHexString("006736")
     }
 }
